@@ -10,7 +10,7 @@ class Store(object):
         del self.items[name]
 
     def get_item(self, name): #Получение цены товара
-        return self.items[name]
+        print(self.items[name])
 
     def update_item(self, name, price): #Обновление цены товара
         self.items[name] = price
@@ -22,4 +22,11 @@ shops.append(Store('Перекресток', 'ул. Пушкина, д. 10', {'�
 shops.append(Store('Пятерочка', 'ул. Ленина, д. 18', {'Яблоки': 200, 'Груша': 300}))
 shops.append(Store('Магнит', 'ул. Глинки, д. 30', {'Хлеб': 200, 'Картофель': 300}))
 
+shops[1].goods()
+shops[1].add_item('Киви', 400)
+shops[1].goods()
+shops[1].remove_item('Груша')
+shops[1].goods()
+shops[1].get_item('Яблоки')
+shops[1].update_item('Киви', 500)
 shops[1].goods()
